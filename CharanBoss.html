@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Webpage</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #000000, #434343);
+            color: #fff;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 15px;
+        }
+        .container {
+            display: flex;
+            align-items: center;
+            background: #ADD8E6;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 1000px;
+            width: 90%;
+            animation: fadeIn 1s ease-in;
+            color: black;
+            flex-wrap: wrap;
+        }
+        .left-content {
+            display: flex;
+            align-items: center;
+            flex: 2;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 100%;
+            margin: 20px;
+            border: 4px solid #4169E1;
+            transition: transform 0.5s, box-shadow 0.5s;
+            animation: scrollImage 3s infinite alternate ease-in-out;
+        }
+        @keyframes scrollImage {
+            0% { transform: translateY(0); }
+            100% { transform: translateY(15px); }
+        }
+        .profile-img:hover {
+            transform: scale(1.1) rotate(5deg);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+        .links-container {
+            text-align: left;
+            max-width: 300px;
+        }
+        .right-content {
+            flex: 1;
+            text-align: center;
+        }
+        .scroll-text {
+            display: inline-block;
+            font-style: italic;
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 36px;
+            font-weight: bold;
+            text-transform: uppercase;
+            animation: scrollText 10s linear infinite alternate, glitter 1s infinite alternate, glow 1.5s infinite alternate;
+            background-image: linear-gradient(90deg, #ff9a9e, #2ed573, #1e90ff, #ffdde1, #fbc531);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            white-space: nowrap;
+            width: 100%;
+        }
+        @keyframes scrollText {
+            0% { transform: translateX(50%); }
+            100% { transform: translateX(-50%); }
+        }
+        .inspirational-quote {
+            font-style: italic;
+            font-size: 20px;
+            font-weight: bold;
+            color: #FFD700; /* Gold color */
+            text-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+         }
+        .thinking-img {
+        width: 80px;  /* Adjust the size */
+        height: 30;
+        margin-bottom: 20px;
+        }
+        .link-button {
+            display: block;
+            margin: 10px 0;
+            padding: 12px;
+            width: 100%;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            text-align: center;
+        }
+        .link-button:hover {
+            transform: scale(1.05);
+        }
+        .btn-1 { background: #ff6347; }
+        .btn-2 { background: #4CAF50; }
+        .btn-3 { background: #1E90FF; }
+        .btn-4 { background: #FFD700; color: black; }
+        .btn-5 { background: #8A2BE2; }
+        .btn-6 { background: #F08080; }
+        .ctc-button {
+            display: inline-block;
+            padding: 12px 20px;
+            background: #1E90FF;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: transform 0.3s;
+            margin-top: 10px;
+        }
+        .ctc-button:hover {
+            transform: scale(1.05);
+        }
+        @media (max-width: 800px) {
+            .container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .right-content {
+                margin-top: 20px;
+            }
+            .left-content {
+                flex-direction: column;
+            }
+            .profile-img {
+                width: 120px;
+                height: 120px;
+            }
+        }
+        @media (max-width: 600px) {
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="left-content">
+            <img src="C:\Users\mdasari\Desktop\web app\Devlop\manik.jpg" alt="Your Picture" class="profile-img">
+            <div class="links-container">
+                <h1 class="scroll-text">MANIK THE ONE</h1>
+                <p>Quick access to important links:</p>
+                <a href="https://avineonindia.darwinbox.in/ms/vibe/home/posts/all" class="link-button btn-1" target="_blank">Avineon India Darwinbox</a>
+            <a href="https://helpdesk.avineonindia.net/apmis/Login/InternalUsersLogin" class="link-button btn-2" target="_blank">APMIS</a>
+            <a href="https://timesheet.avineonindia.net/TimeSheet/" class="link-button btn-3" target="_blank">Avineon Timesheet</a>
+            <a href="https://outlook.office.com/mail/sentitems" class="link-button btn-4" target="_blank">Avineon Outlook</a>
+            <a href="https://helpdesk.avineonindia.net/ISRS" class="link-button btn-5" target="_blank">Avineon ISRS</a>
+            <a href="https://mypayroll.paysquare.com/" class="link-button btn-6" target="_blank">PAY SQUARE</a>
+            
+            </div>
+        </div>
+        <div class="right-content"><br></br><br></br><br>
+            <h4>Do you want to check your hike % ?</h4>
+            <a href="C:\Users\mdasari\Desktop\web app\Devlop\calculator.html" class="ctc-button">CTC CALCI</a><br></br><br></br>
+            <img src="C:\Users\mdasari\Desktop\web app\Devlop\man-hand-holding.jpg" alt="Thinking Icon" class="thinking-img">
+            <h4 class="inspirational-quote">"A quitter never wins" <br> A winner never quits"</h4>
+            
+        </div>
+    </div>
+</body>
+</html>
